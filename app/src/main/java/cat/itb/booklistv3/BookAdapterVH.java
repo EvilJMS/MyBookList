@@ -87,4 +87,9 @@ public class BookAdapterVH extends RecyclerView.Adapter<BookAdapterVH.BookVH>{
 
     }
 
+    public void addBook(Book book){
+        bookList.add(book);
+        this.notifyDataSetChanged();
+    }
+
 }

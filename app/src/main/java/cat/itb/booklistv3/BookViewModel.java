@@ -10,6 +10,7 @@ import java.util.List;
 
 public class BookViewModel extends ViewModel {
     List<Book> bookLists = new ArrayList<>();
+    private BookAdapterVH adapterVH;
 
     public BookViewModel() {
         Book b1 = new Book("Re: Zero Vol 1","Tappei Nagatsuki","Readed",4);
@@ -27,7 +28,8 @@ public class BookViewModel extends ViewModel {
     }
 
     public void addBook(Book book){
-        bookLists.add(book);
+        adapterVH = new BookAdapterVH(bookLists);
+        adapterVH.addBook(book);
     }
 }
 

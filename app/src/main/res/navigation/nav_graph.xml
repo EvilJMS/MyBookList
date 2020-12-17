@@ -25,5 +25,8 @@
             android:name="book"
             app:argType="cat.itb.booklistv3.Book"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_update_to_list"
+            app:destination="@id/bookListFragment" />
     </fragment>
 </navigation>

@@ -68,7 +68,7 @@ public class BookUpdateAddFragment extends Fragment {
             public void onClick(View v) {
                 addUpdateBook();
                 if (newBook){
-
+                    Navigation.findNavController(v).navigate(R.id.action_update_to_list);
                 }
             }
         });
@@ -143,7 +143,8 @@ public class BookUpdateAddFragment extends Fragment {
             } else {
                 if (newBook){
                     bookNew = new Book(titleEditText.getText().toString(), authorEditText.getText().toString(), status, (int) ratingBar.getRating());
-                    viewModel.addBook(bookNew);
+                    MainActivity.bookViewModel.addBook(bookNew);
+
                 } else {
                     book.setName(titleEditText.getText().toString());
                     book.setAuthor(authorEditText.getText().toString());
